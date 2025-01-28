@@ -1,0 +1,47 @@
+{
+  "name": "deepseek-cli",
+  "version": "1.0.0",
+  "description": "A CLI tool for DeepSeek AI",
+  "main": "bin/cli.js",
+  "bin": {
+    "deepseek": "bin/cli.js",
+    "ds": "bin/cli.js"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "node bin/cli.js",
+    "dev": "cross-env NODE_OPTIONS=--no-warnings node bin/cli.js",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "keywords": [
+    "cli",
+    "deepseek",
+    "ai"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^11.1.0",
+    "inquirer": "^9.2.12",
+    "chalk": "^5.3.0",
+    "conf": "^12.0.0",
+    "ora": "^8.0.1",
+    "openai": "^4.0.0",
+    "cli-table3": "^0.6.3",
+    "cross-env": "^7.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "prettier": "^3.1.1"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "resolutions": {
+    "punycode": "^2.3.1"
+  },
+  "overrides": {
+    "punycode": "^2.3.1"
+  }
+}
