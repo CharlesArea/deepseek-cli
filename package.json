@@ -1,12 +1,13 @@
 {
   "name": "deepseek-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A CLI tool for DeepSeek AI",
   "main": "bin/cli.js",
   "bin": {
     "deepseek": "bin/cli.js",
     "ds": "bin/cli.js"
   },
+  "preferGlobal": true,
   "type": "module",
   "scripts": {
     "start": "node bin/cli.js",
