@@ -28,7 +28,7 @@ export async function askCommand(question) {
       const response = await query(question);
       spinner.stop();
       spinner.clear();
-      console.log(chalk.cyan("\nDeepSeek: ") + response);
+      console.log(chalk.cyan("\nDeepSeek: ") + response + "\n");
     } catch (error) {
       spinner.stop();
       spinner.clear();

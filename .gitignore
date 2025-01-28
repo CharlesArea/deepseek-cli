@@ -3,6 +3,10 @@ node_modules/
 package-lock.json
 yarn.lock
 
+# Scripts
+scripts/
+scripts/*
+
 # Environment variables
 .env
 .env.local

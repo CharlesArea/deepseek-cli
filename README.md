@@ -57,12 +57,16 @@ Start querying DeepSeek AI:
 
 ```bash
 deepseek ask "What is quantum computing?"
+# or use shorthand syntax
+deepseek "What is quantum computing?"
 ```
 
 Or use the shorter alias:
 
 ```bash
 ds ask "What is quantum computing?"
+# or use shorthand syntax
+ds "What is quantum computing?"
 ```
 
 ---
@@ -141,4 +145,4 @@ This project is licensed under the [MIT License](LICENSE). Feel free to use, mod
 
 ## 📞 **Support**
 
-For issues or feature requests, please open an [issue](https://github.com/your-repository/deepseek-cli/issues). We’d love to hear your feedback!
+For issues or feature requests, please open an [issue](https://github.com/your-repository/deepseek-cli/issues). We'd love to hear your feedback!
