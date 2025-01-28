@@ -7,6 +7,10 @@ yarn.lock
 scripts/
 scripts/*
 
+# Config files
+config.yml
+demo.yml
+
 # Environment variables
 .env
 .env.local

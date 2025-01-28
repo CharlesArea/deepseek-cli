@@ -48,32 +48,6 @@ Documentation: github.com/CharlesArea/deepseek-cli
   console.log();
 };
 
-// Custom argument parsing for root command
-const originalArgs = process.argv.slice(2);
-
-// Helper function to check if input is valid
-const isValidInput = (str) => {
-  // Check if this is a single argument containing spaces
-  if (!str) return false;
-
-  // If it contains spaces, it must have been properly quoted
-  if (str.includes(" ")) {
-    // Check if this was a single argument (meaning it was quoted)
-    return (
-      originalArgs.length === 1 ||
-      (originalArgs.length === 2 && originalArgs[0] === "ask")
-    );
-  }
-
-  return true;
-};
-
-// If we have a single argument with spaces, it must have been quoted
-if (originalArgs.length === 1 && originalArgs[0].includes(" ")) {
-  // If the only argument is wrapped in quotes, treat it as an ask command
-  process.argv.splice(2, 0, "ask");
-}
-
 program
   .name("deepseek")
   .description("DeepSeek CLI tool")
@@ -90,13 +64,11 @@ program
   .command("ask")
   .alias("a")
   .description("Ask DeepSeek AI a question")
-  .argument("[question]", "The question to ask (must be wrapped in quotes)")
+  .argument("[question]", "The question to ask")
   .action((question) => {
-    if (question && !isValidInput(question)) {
-      console.error(chalk.red("Error: Question must be wrapped in quotes"));
-      console.log(chalk.yellow('Example: ds ask "your question"'));
-      console.log();
-      process.exit(1);
+    // Remove quotes if present
+    if (question) {
+      question = question.replace(/^["']|["']$/g, "");
     }
     askCommand(question);
   });
@@ -105,16 +77,11 @@ program
 program
   .argument("[question]", "The question to ask (shorthand for ask command)")
   .action((question) => {
-    if (question && isValidInput(question)) {
-      // If there's a direct question, treat it as an ask command
+    if (question) {
+      // Remove quotes if present
+      question = question.replace(/^["']|["']$/g, "");
       askCommand(question);
-    } else if (question) {
-      console.error(chalk.red("Error: Question must be wrapped in quotes"));
-      console.log(chalk.yellow('Example: ds "your question"'));
-      console.log();
-      process.exit(1);
     } else {
-      // If no question, show help
       program.help();
     }
   });

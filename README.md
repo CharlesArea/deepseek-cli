@@ -4,6 +4,24 @@
 
 Deepseek-CLI is a modern and easy-to-use command-line interface for interacting with the DeepSeek AI. Whether you need answers to your questions or want to configure your AI experience, this tool brings the power of DeepSeek to your terminal.
 
+## 📑 Table of Contents
+
+- [Features](#-features)
+  - [Simple & Intuitive Commands](#-simple--intuitive-commands)
+  - [AI Interaction](#-ai-interaction)
+  - [Advanced Configuration](#️-advanced-configuration)
+- [Quick Start](#-quick-start)
+  - [Installation](#installation)
+  - [Configuration](#configuration)
+  - [Ask Questions](#ask-questions)
+- [Commands](#-commands)
+  - [Ask](#ask)
+  - [Config](#config)
+  - [Chat (Coming Soon)](#chat-coming-soon)
+- [Development & Contribution](#-development--contribution)
+- [License](#-license)
+- [Support](#-support)
+
 ---
 
 ## ✨ **Features**
