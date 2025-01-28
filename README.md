@@ -89,7 +89,7 @@ Configure your DeepSeek settings, including API key and model preferences.
 deepseek config
 ```
 
-### **Chat (**`** or **`**)**
+### **Chat (**`** or **`**)** (Coming Soon)
 
 Initiate an interactive chat session with DeepSeek AI.
 
