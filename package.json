@@ -1,6 +1,6 @@
 {
   "name": "deepseek-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A CLI tool for DeepSeek AI",
   "main": "bin/cli.js",
   "bin": {
